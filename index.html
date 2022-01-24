@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="ie=chrome=1">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Triumf Background Radiation Page</title>
+   <link rel="stylesheet" href="./Trial2.css">
+   <script src="./TriumfScripts/lottie.js"></script>
+
+
+
+</head>
+
+<body class="ba">
+
+
+   <img class="sideline" src="./TriumfScripts/images/sideline.png">
+
+   <div class="header">
+      <img class="homebutton" src="./TriumfScripts/images/TRIUMF_Logo_DOL.svg" style="width: 305px; padding: 20px 10px">
+      <img class="menubutton" src="./TriumfScripts/images/Menuicon.svg"
+         style="height: 14px; padding: 29px 20px; float: right;">
+      <a class="smalltext" href="#en" data-reload style="float: right;">En</a>
+      <a class="smalltext" href="#fr" data-reload style="float: right;">Fr</a>
+   </div>
+
+
+
+   <div class="gridsystem1">
+
+      <section id="RadiationText">
+         <p id="h1">Backround Radiation</p>
+         <p id="para">Sources of radiation include galactic cosmic rays,
+            solar energy particles, and the Earth’s radiation belt.
+         </p>
+      </section>
+
+      <div id="sunanim" style="z-index:2000; cursor: pointer; width: 297.09px;" onclick="displayradiationtext()">
+         <script src="./TriumfScripts/sunscript.js"></script>
+      </div>
+
+      <section id="Skylayer1">
+         <img src="./TriumfScripts/images/skylayer1.png"></img>
+      </section>
+
+      <section id="Asteroid">
+         <img src="./TriumfScripts/images/asteroid.svg"></img>
+      </section>
+
+      <img id="Starsystemstatic" src="./TriumfScripts/images/Meteorshower.svg">
+
+      <img id="Skylayer2" src="./TriumfScripts/images/skylayer2.svg" style="width: 100%;">
+
+      <section id="Planet1">
+         <img src="./TriumfScripts/images/Planet1.svg">
+      </section>
+
+      <span id="Planet2">
+         <img src="./TriumfScripts/images/Saturn.svg">
+      </span>
+
+      <div id="Satellite" style="z-index:2000; cursor: pointer;" onclick="displayDeepSpaceText()">
+         <script src="./SatelliteScripts/Satellitescript.js"></script>
+      </div>
+
+      <section id="DeepSpaceText">
+         <p id="TextTitle">Deep Space</p>
+         <p id="TextBody">Deep space up to 300,000 particles/cm<sup>2</sup>/h, mainly protons with some particles and
+            heavier ions.
+         </p>
+      </section>
+
+      <section id="Skylayer3">
+         <img src="./TriumfScripts/images/Skylayer3.svg">
+      </section>
+
+
+      <div id="Starsystem" style="z-index:5000;cursor: pointer;"  onclick="displayGeoText()">
+         <script src="./StarsystemScripts/Starsystemscript.js" ></script>
+      </div>
+
+
+      <span id="Powerstation"style="z-index:5000;cursor: pointer;"  onclick="displayLowEarthText()">
+         <script src="./PowerstationScripts/Powerstationscrpt.js"></script>
+      </span>
+
+      <section id="GeoText">
+         <p id="TextTitle">Geosynchronous Orbit</p>
+         <p id="TextBody">Up to 500,000 particles/cm<sup>2</sup>/h, mainly electrons and protons.
+         </p>
+      </section>
+
+      <span id="Rocket">
+         <img src="./TriumfScripts/images/Rocket.svg" style="width:100%">
+      </span>
+
+      <section id="LowEarthText">
+         <p id="TextTitle">Low Earth Orbit</p>
+         <p id="TextBody">Up to 100,000 particles/cm<sup>2</sup>/h, mainly protons and electrons.
+         </p>
+      </section>
+      <section id="AirplaneText">
+         <p id="TextTitle">Airplane Altitude</p>
+         <p id="TextBody">6000-9000 neutrons/cm<sup>2</sup>/h.
+         </p>
+      </section>
+      <span id="Airplane" style="z-index:5000;cursor: pointer;"  onclick="displayAirplaneText()">
+         <img src="./TriumfScripts/images/Airplane.svg">
+      </span>
+
+   </div>
+
+
+
+   <div class="gridsystem2">
+
+      <div class="Vector1 container reveal" style=" margin-top: -1400px; z-index: 1001;">
+         <span id="Particle">
+            <script src="./ParticleScripts/Particlescript.js" style="width:100%;"></script>
+         </span>
+      </div>
+
+
+      <section id="GroundLevel">
+         <p id="TextTitle">Ground Level</p>
+         <p id="TextBody">10-15 neutrons/cm<sup>2</sup>/h, ~ 60 muons/cm<sup>2</sup>/h.
+         </p>
+      </section>
+
+   </div>
+
+   <div class="Mountains">
+      <img src="TriumfScripts/images/Mountains.svg" style="width:100%;">
+      <section id="Train"><img src="TriumfScripts/images/Train.svg"></section>
+      <section id="Car"><img src="TriumfScripts/images/Car.svg"></section>
+      
+   </div>
+
+
+
+
+
+
+
+
+   <!---Reveal Text Script-->
+   <script type="text/javascript">
+      window.addEventListener('scroll', reveal);
+
+      function reveal() {
+         var reveals = document.querySelectorAll('.reveal');
+
+         for (var i = 0; i < reveals.length; i++) {
+
+            var windowheight = window.innerHeight;
+            var revealtop = reveals[i].getBoundingClientRect().top;
+            var revealpoint = 280;
+
+            if (revealtop < windowheight - revealpoint) {
+               reveals[i].classList.add('active');
+            }
+            else {
+               reveals[i].classList.remove('active');
+            }
+         }
+      }
+   </script>
+
+
+</body>
+
+</html>
