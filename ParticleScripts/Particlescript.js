@@ -1,9 +1,1 @@
-var animation13 = bodymovin.loadAnimation({
-    container: document.getElementById('Particle'),
-    renderer:'svg',
-    loop: true,
-    autoplay: true,
-    path: './ParticleScripts/Particledata.json',
-    
-    })
-    
+var animation13=bodymovin.loadAnimation({container:document.getElementById("Particle"),renderer:"svg",loop:!0,autoplay:!0,path:"./ParticleScripts/Particledata.json"});
